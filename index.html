@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <form id="city_form">
+                <input type="text" class="search bar" id="search_bar" placeholder="Search city...">
+                <input type="submit" class="submit" value="">
+            </form>
+            <div class="units">
+                <div class="unit active" id="celcius">°C</div>
+                <div class="unit" id="fareheit">°F</div>
+            </div>
+        </nav>
+        <div class="web">
+            <div class="left">
+                <div class="summary-box">
+                    <div class="summary">
+                        <div class="relevant-data">
+                            <div class="temp">
+                                <h1>--°-</h1>
+                                <div class="feel-like">Feels like --°-</div>
+                            </div>
+                            <div class="symbol"></div>
+                        </div>
+                        <div class="non-temp">
+                            <div class="non-weather-data">
+                                <h2 class="location">Location</h2>
+                                <h3 class="date">date-hour</h3>
+                            </div>
+                            <div class="extra-data">
+                                <div class="rain">
+                                    <div class="data"><div>--%</div></div>
+                                    <div class="symbol"></div>
+                                </div>
+                                <div class="wind">
+                                    <div class="data"><div>-- km/h</div></div>
+                                    <div class="symbol"></div>
+                                </div>
+                                <div class="humidity">
+                                    <div class="data"><div>--%</div></div>
+                                    <div class="symbol"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="today-box">
+                    <div class="today">
+                        <div class="today-grid">
+                            <div id="hour-0-00">
+                                <div class="hour">00:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-2-00">
+                                <div class="hour">02:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-4-00">
+                                <div class="hour">04:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-6-00">
+                                <div class="hour">06:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-8-00">
+                                <div class="hour">08:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-10-00">
+                                <div class="hour">10:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-12-00">
+                                <div class="hour">12:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-14-00">
+                                <div class="hour">14:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-16-00">
+                                <div class="hour">16:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-18-00">
+                                <div class="hour">18:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-20-00">
+                                <div class="hour">20:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                            <div id="hour-22-00">
+                                <div class="hour">22:00</div>
+                                <div class="symbol"></div>
+                                <div class="temp">--</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right week">
+                <h2>Daily Forecast</h2>
+                <div class="daily-forecast">
+                    <div>
+                        <div class="box active" id="day-one">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box" id="day-two">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box" id="day-three">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box" id="day-four">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box" id="day-five">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box" id="day-six">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box" id="day-seven">
+                            <div class="day"><h3>Day</h3></div>
+                            <div class="symbol"></div>
+                            <div class="weather"><h4>-</h4></div>
+                            <div class="max-min"><h4>max/min</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

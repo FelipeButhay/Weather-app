@@ -1,0 +1,408 @@
+body {
+    background-color: #444;
+    color: #fff;
+    font-family: system-ui;
+}
+
+/* ------------------------------------------------------------- */
+/* NAV BAR DESIGN */
+/* ------------------------------------------------------------- */
+
+nav {
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background-color: #333;
+    display: inline;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav input.search.bar {
+    z-index: 100;
+    position: absolute;
+    height: 50px;
+    aspect-ratio: 6/1;
+    top: 50%;
+    left: 30px;
+    border-radius: 25px;
+    transform: translateY(-50%);
+    background-color: #222;
+    border: none;
+    padding-left: 25px;
+    font-size: 20px;
+    font-family: system-ui;
+}
+
+nav input.search.bar:focus {
+    background-color: #222;
+    outline: none;
+    color: #fff;
+}
+
+input.submit {
+    z-index: 50;
+    border: none;
+    height: 50px;
+    width: 130px;
+    position: absolute;
+    top: 50%;
+    left: 310px;
+    border-radius: 30px;
+    transform: translateY(-50%);
+    background-color: #666;
+    cursor: pointer;
+}
+
+nav input.submit:active {
+    background-color: #222;
+}
+
+.units {
+    height: 50px;
+    aspect-ratio: 2/1;
+    background-color: #222;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    border-radius: 25px;
+    transform: translateY(-50%);
+    display: flex;
+    cursor: pointer;
+}
+
+.unit {
+    flex: 1;
+    background-color: transparent;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 50%;
+    
+}
+
+.unit.active {
+    background-color: #fff;
+    color: #222
+}
+
+/* ------------------------------------------------------------- */
+/* RESPONSIVE DIVS */
+/* ------------------------------------------------------------- */
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.web {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #555;
+    display: flex;
+}
+
+.left{
+    min-width: 700px;
+    height: calc(100vh - 80px);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.left .summary-box{
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.left .today-box{
+    position: relative;
+    width: 100%;
+    height: 50%;
+}
+
+.right{
+    flex: 1;
+}
+
+@media (max-width: 1300px) {
+    .web {
+        flex-direction: column;
+        height: 200%;
+        height: calc(calc(100vh - 80px) * 2);
+    }
+
+    .left {
+        min-width: auto;
+        width: 100%;
+        order:1;
+    }
+
+    .right {
+        height: calc(100vh - 80px);
+        min-width: auto;
+        order: 2;
+    }
+}
+
+/* ------------------------------------------------------------- */
+/* DAYLY FORECAST */
+/* ------------------------------------------------------------- */
+
+.right.week {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right.week h2 {
+    font-size: 50px;
+    margin: 20px;
+    margin-left: 10px;
+    height: 70px;
+}
+
+.right.week .daily-forecast{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.right.week .daily-forecast div{
+    flex: 1;
+}
+
+.right.week .daily-forecast div .box{
+    position: relative;
+    margin: 10px;
+    background-color: #444;
+    height: calc(100% - 20px);
+    border-radius: 20px;
+    display: flex;
+}
+
+.right.week .daily-forecast div .box.active{
+    background-color: #383838;
+}
+
+.right.week .daily-forecast div .box .day{
+    flex: 3;
+    max-width: 240px;
+}
+
+.right.week .daily-forecast div .box .day h3{
+    font-size: 32px;
+    line-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.right.week .daily-forecast div .box .symbol{
+    flex: 0 0 auto;
+    aspect-ratio: 1/1;
+}
+
+.right.week .daily-forecast div .box .weather{
+    position: relative;
+    flex: 2;
+}
+
+.right.week .daily-forecast div .box .weather h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #bbb;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.right.week .daily-forecast div .box .max-min{
+    position: relative;
+    flex: 2;
+    max-width: 240px;
+}
+
+.right.week .daily-forecast div .box .max-min h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ------------------------------------------------------------- */
+/* TODAY SUMMARY */
+/* ------------------------------------------------------------- */
+
+.summary-box {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.summary {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #444;
+    border-radius: 20px;
+}
+
+.summary .relevant-data{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.summary .relevant-data .temp {
+    flex: 1;
+    padding: 24px 40px
+}
+
+.summary .relevant-data .temp h1 {
+    font-size: 140px;
+    line-height: 140px;
+    margin-bottom: 10px;
+}
+
+.summary .relevant-data .temp .feel-like {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.summary .relevant-data .symbol {
+    flex: 0 0 auto;
+    aspect-ratio: 1/1;
+}
+
+.summary .non-temp {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+}
+
+.summary .non-weather-data{
+    flex: 1;
+    padding: 10px 40px 24px 40px;
+    box-sizing: border-box;
+}
+
+.summary .non-weather-data h2 {
+    font-size: 50px;
+}
+
+.summary .non-weather-data h3 {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.summary .extra-data{
+    flex: 0 0 auto;
+    aspect-ratio: 3/2;
+}
+
+.summary .extra-data{
+    flex: 0 0 auto;
+    aspect-ratio: 3/2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px 30px 30px;
+}
+
+.summary .extra-data > div {
+    flex: 1;
+    display: flex;
+}
+
+.summary .extra-data > div .symbol{
+    flex: 0 0 auto;
+    aspect-ratio: 1/1;
+}
+
+.summary .extra-data > div .data{
+    flex: 1;
+    position: relative;
+}
+
+.summary .extra-data > div .data div{
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 16px;
+    text-align: right;
+}
+
+/* ------------------------------------------------------------- */
+/* TODAY HOURS */
+/* ------------------------------------------------------------- */
+
+.today-box {
+    box-sizing: border-box;
+}
+
+.today {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #444;
+    border-radius: 20px;
+}
+
+.today .today-grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    padding: 20px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.today .today-grid > div{
+    background-color: #333;
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+}
+
+.today .today-grid div .hour{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 8px 0 8px 0;
+}
+
+.today .today-grid div .temp {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 75px 0 8px 0;
+}
+
+.today .today-grid div .symbol {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 1/1;
+}
